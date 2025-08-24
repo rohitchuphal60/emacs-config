@@ -23,7 +23,9 @@
 (global-set-key (kbd "C-x s") 'isearch-forward)
 (global-set-key (kbd "C-q") 'save-buffers-kill-emacs)
 (global-set-key (kbd "C-l") 'list-buffers)
-
+;; compilation
+(global-set-key (kbd "C-x c") 'compile)
+(setq compile-command "")
 ;; key binding for dired
 
 
@@ -41,16 +43,22 @@
       `((".*" "~/.emacs.d/auto-saves/" t)))
 
 (custom-set-variables
- 
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(cua-mode t)
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes
    '("e13beeb34b932f309fb2c360a04a460821ca99fe58f69e65557d6c1b10ba18c7" default))
  '(display-line-numbers 'relative)
  '(package-selected-packages
-   '(flycheck lsp-mode company magit sequential-yank ## gruber-darker-theme smex)))
+   '(which-key lsp-ui flycheck lsp-mode company magit sequential-yank ## gruber-darker-theme smex)))
 (custom-set-faces
-
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 (progn (unload-feature 'seq t) (require 'seq))
 
